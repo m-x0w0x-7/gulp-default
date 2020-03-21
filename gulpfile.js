@@ -69,7 +69,7 @@ function pugFunc() {
 // ejs
 function ejsFunc() {
   // JSONファイルの読み込みと変換
-  const configJsonData = fs.readFileSync( paths.ejs + '/data/config.json' );
+  const configJsonData = fs.readFileSync( paths.ejs + '/_data/config.json' );
   const configObj = JSON.parse( configJsonData );
 
   // ejsのデータ読み込み設定

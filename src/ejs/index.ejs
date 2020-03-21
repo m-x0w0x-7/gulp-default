@@ -1,14 +1,16 @@
 <%
-var pageData = {
-  pageTitle: "お問い合わせ"
+var page = {
+  title: "お問い合わせ",
+  path: "../"
 };
 %>
 
 <!DOCTYPE html>
 <html lang="ja">
-  <%- include('./include/_head', pageData) %>
+  <%- include(page.path + '_include/_head', {page: page}) %>
 <body>
   <p>test</p>
   <span>aaa</span>
+  <a href="<%= page.path %>">
 </body>
 </html>
