@@ -24,7 +24,7 @@
   "devDependencies": {
     "@babel/core": "^7.9.0",
     "@babel/preset-env": "^7.9.0",
-    "autoprefixer": "^9.7.4",
+    "autoprefixer": "^9.7.5",
     "babel-loader": "^8.1.0",
     "browser-sync": "^2.26.7",
     "del": "^5.1.0",
@@ -44,7 +44,7 @@
     "imagemin-mozjpeg": "^8.0.0",
     "imagemin-pngquant": "^8.0.0",
     "postcss-flexbugs-fixes": "^4.2.0",
-    "webpack": "^4.42.0",
+    "webpack": "^4.42.1",
     "webpack-stream": "^5.2.1"
   },
   "dependencies": {
