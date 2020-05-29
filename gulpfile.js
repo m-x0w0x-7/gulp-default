@@ -180,6 +180,8 @@ function serve(done) {
     },
     // proxy
     // proxy: 'localhost',
+    // port: 3000,
+    // index: index.html,
     ghostMode: false,
     open: 'local',
     notify: true,
