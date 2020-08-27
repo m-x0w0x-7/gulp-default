@@ -1,0 +1,22 @@
+// * ============================== * //
+
+// display setting
+// ex. 
+
+// * ============================== * //
+
+
+// display
+// ----------------------------------------
+.pc_none {
+  @include mq() {
+    display: none;
+  }
+}
+
+.sp_none {
+  display: none;
+  @include mq() {
+    display: inline-block;
+  }
+}

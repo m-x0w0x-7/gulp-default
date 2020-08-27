@@ -1,0 +1,32 @@
+<%
+  var _default = meta['default'];
+  for ( var key in _default ) {
+    if ( typeof page.meta[key] === 'undefined' ) {
+      page.meta[key] = _default[key];
+    }
+  }
+  var rand = Math.floor( Math.random() * ( 999 + 1 - 100 ) ) + 100;
+%>
+
+<head>
+<meta charset="UTF-8">
+<title><%= page.meta['title'] %></title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="<%= page.meta['description'] %>">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:url" content="<%= page.meta['url'] %>">
+<meta property="og:title" content="<%= page.meta['title'] %>">
+<meta property="og:type" content="<%= page.meta['type'] %>">
+<meta property="og:description" content="<%= page.meta['description'] %>">
+<meta property="og:image" content="<%= page.meta['image'] %>">
+<meta property="og:site_name" content="<%= page.meta['siteName'] %>">
+<meta property="og:locale" content="ja_JP">
+<meta property="fb:app_id" content="<%= page.meta['appId'] %>">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="<%= page.meta['twitter'] %>">
+<link rel="canonical" href="<%= page.meta['canonical'] %>">
+<link rel="icon" href="<%= page.meta['favicon'] %>">
+<link rel="app-touch-icon-precomposed" href="<%= page.meta['icon'] %>">
+<link rel="stylesheet" href="/css/common.scss?<%- rand %>">
+</head>

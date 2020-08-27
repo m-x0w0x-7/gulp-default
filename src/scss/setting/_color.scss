@@ -1,0 +1,54 @@
+// * ============================== * //
+
+// color setting
+// ex. 
+
+// * ============================== * //
+
+
+$colors: (
+  // background color
+  'body': (
+    'default': #fff
+  ),
+  // theme color
+  'theme': (
+    'default': #e74c3c,
+    'light'  : #f09188,
+    'dark'   : #b82617
+  ),
+  // line color
+  'border': (
+    'default': #ccc,
+    'light'  : #eee,
+    'dark'   : #aaa
+  ),
+  // text color
+  'text': (
+    'default': #666,
+    'light'  : #999,
+    'dark'   : #333
+  ),
+  // link color
+  'link': (
+    'default': #e74c3c,
+    'light'  : #f09188,
+    'dark'   : #b82617
+  ),
+  // button color
+  'button': (
+    'default' : #333,
+    'hover'   : #888,
+    'active'  : #2ecc71,
+    'disabled': #ccc
+  ),
+  // icon color
+  'icon': (
+    'default'  : #55acee,
+    'light' : #3b5998
+  ),
+);
+
+@function color($color-group, $color-type: 'default') {
+  @return map-get(map-get($colors, $color-group), $color-type);
+}

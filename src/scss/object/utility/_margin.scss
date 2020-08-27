@@ -1,0 +1,28 @@
+// * ============================== * //
+
+// margin setting
+// ex. 
+
+// * ============================== * //
+
+
+// for margin adjustment scss
+// ----------------------------------------
+$spaceClass: true !default; //余白調整用のclassを使うか使わないか
+$spacePadding: false !default; // paddingによる余白調整用のclassを使うか使わないか
+$endValue: 100 !default; // 生成するclassの数
+
+@if $spaceClass {
+  @for $i from 0 through $endValue {
+    .u-mt#{ $i } { margin-top: #{$i}px !important; }
+    .u-mb#{ $i } { margin-bottom: #{$i}px !important; }
+    .u-mr#{ $i } { margin-right: #{$i}px !important; }
+    .u-ml#{ $i } { margin-left: #{$i}px !important; }
+    @if $spacePadding {
+      .u-pt#{ $i } { padding-top: #{$i}px !important }
+      .u-pb#{ $i } { padding-bottom: #{$i}px !important }
+      .u-pr#{ $i } { padding-right: #{$i}px !important }
+      .u-pl#{ $i } { padding-left: #{$i}px !important }
+    }
+  }
+}

@@ -47,33 +47,17 @@ const paths = {
 }
 
 
-
-// pug
-function pugFunc() {
-  // JSONファイルの読み込みと変換
-  const configPugData = fs.readFileSync(paths.pug + '/data/config.json');
-  const configPugObj = JSON.parse(configPugData);
-
-  return gulp
-    .src([ paths.pug + '/**/*.pug', '!' + paths.pug + '/**/_*.pug' ])
-    .pipe(plumber({ errorHandler: notify.onError('Error: <%= error.message %>') }))
-    .pipe(data(file => {
-      return configPugObj;
-    }))
-    .pipe(pug({ pretty: true }))
-    .pipe(gulp.dest( paths.root ))
-    .pipe(browserSync.reload({ stream: true }));
-}
-
-
 // ejs
 function ejsFunc() {
   // JSONファイルの読み込みと変換
+  const metaJsonData = fs.readFileSync( paths.ejs + '/_data/meta.json' );
   const configJsonData = fs.readFileSync( paths.ejs + '/_data/config.json' );
+  const metaObj = JSON.parse( metaJsonData );
   const configObj = JSON.parse( configJsonData );
 
   // ejsのデータ読み込み設定
   const ejsDataOption = {
+    meta: metaObj,
     config: configObj
   };
 
@@ -156,7 +140,6 @@ function image() {
       quality: 80
     }),
     imagemin.gifsicle(),
-    imagemin.jpegtran(),
     imagemin.optipng(),
     imagemin.svgo({
       removeViewBox: false
@@ -192,7 +175,6 @@ function serve(done) {
 
 // watch
 function watch(done) {
-  gulp.watch(paths.pug + '/**/*.pug', gulp.parallel(pugFunc));
   gulp.watch(paths.ejs + '/**/*.ejs', gulp.parallel(ejsFunc));
   gulp.watch(paths.scss + '/**/*.scss', gulp.parallel(scss));
   gulp.watch(paths.javascript + '/**/*.js', gulp.parallel(js));
@@ -209,13 +191,13 @@ function clean() {
 
 // default task(dev)
 exports.default = gulp.series(
-  gulp.parallel(pugFunc, ejsFunc, scss, js, image),
+  gulp.parallel(ejsFunc, scss, js, image),
   gulp.parallel(serve, watch)
 );
 
 // default task(build)
 exports.build = gulp.series(
   clean,
-  gulp.parallel(pugFunc, ejsFunc, scssBuild, js, image),
+  gulp.parallel(ejsFunc, scssBuild, js, image),
   gulp.parallel(serve, watch)
 )

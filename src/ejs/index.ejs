@@ -1,16 +1,13 @@
 <%
 var page = {
-  title: "お問い合わせ",
-  path: "../"
+  id: 'top',
+  meta: meta['top'],
+  path: "./"
 };
 %>
 
-<!DOCTYPE html>
-<html lang="ja">
-  <%- include(page.path + '_include/_head', {page: page}) %>
-<body>
-  <p>test</p>
-  <span>aaa</span>
-  <a href="<%= page.path %>">
-</body>
-</html>
+<%- include(page.path + '_layout/_layout_header', {page: page}); %>
+
+トップページ
+
+<%- include(page.path + '_layout/_layout_footer', {page: page}); %>
