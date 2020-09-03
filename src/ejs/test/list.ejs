@@ -1,0 +1,29 @@
+<%
+var page = {
+  id: 'list',
+  meta: meta['list'],
+  path: '../'
+};
+%>
+
+<%- include(page.path + '_layout/_layout_header', {page: page}); %>
+
+<ul>
+  <li>
+    <span><%= lists['list01']['name'] %></span>
+    <img src="<%= lists['list01']['img'] %>" alt="">
+    <a href="<%= lists['list01']['url'] %> "></a>
+  </li>
+  <li>
+    <span><%= lists['list02']['name'] %></span>
+    <img src="<%= lists['list02']['img'] %>" alt="">
+    <a href="<%= lists['list02']['url'] %> "></a>
+  </li>
+  <li>
+    <span><%= lists['list03']['name'] %></span>
+    <img src="<%= lists['list03']['img'] %>" alt="">
+    <a href="<%= lists['list03']['url'] %> "></a>
+  </li>
+</ul>
+
+<%- include(page.path + '_layout/_layout_footer', {page: page}); %>

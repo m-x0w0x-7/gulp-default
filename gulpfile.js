@@ -51,14 +51,17 @@ const paths = {
 function ejsFunc() {
   // JSONファイルの読み込みと変換
   const metaJsonData = fs.readFileSync( paths.ejs + '/_data/meta.json' );
-  const configJsonData = fs.readFileSync( paths.ejs + '/_data/config.json' );
+  const itemJsonData = fs.readFileSync( paths.ejs + '/_data/item.json' );
+  const listJsonData = fs.readFileSync( paths.ejs + '/_data/list.json' );
   const metaObj = JSON.parse( metaJsonData );
-  const configObj = JSON.parse( configJsonData );
+  const itemObj = JSON.parse( itemJsonData );
+  const listObj = JSON.parse( listJsonData );
 
   // ejsのデータ読み込み設定
   const ejsDataOption = {
     meta: metaObj,
-    config: configObj
+    items: itemObj,
+    lists: listObj
   };
 
   return gulp
@@ -154,6 +157,20 @@ function image() {
 }
 
 
+// copy
+function copy() {
+  return gulp
+    .src([paths.javascript + '/lib/*.js'])
+    .pipe(gulp.dest(paths.js + '/lib/'));
+}
+
+
+// clean
+function clean() {
+  return del(paths.root + '/**/*');
+}
+
+
 // browser sync
 function serve(done) {
   browserSync.init({
@@ -183,21 +200,21 @@ function watch(done) {
 }
 
 
-// clean
-function clean() {
-  return del(paths.root + '/**/*');
-}
-
-
 // default task(dev)
 exports.default = gulp.series(
-  gulp.parallel(ejsFunc, scss, js, image),
+  gulp.parallel(ejsFunc, scss, js, copy, image),
   gulp.parallel(serve, watch)
 );
 
 // default task(build)
 exports.build = gulp.series(
   clean,
-  gulp.parallel(ejsFunc, scssBuild, js, image),
+  gulp.parallel(ejsFunc, scssBuild, js, copy, image),
   gulp.parallel(serve, watch)
-)
+);
+
+
+// clean
+exports.clean = clean;
+
+

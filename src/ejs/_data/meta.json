@@ -19,7 +19,13 @@
     "canonical": "http://example.com/"
   },
 
-  "page": {
+  "test": {
+    "title": "page - document",
+    "description": "page description",
+    "canonical": "http://example.com/page/"
+  },
+
+  "list": {
     "title": "page - document",
     "description": "page description",
     "canonical": "http://example.com/page/"

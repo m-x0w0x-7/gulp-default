@@ -1,0 +1,38 @@
+[
+  {
+    "head": "タイトル01",
+    "lead": "リード文01",
+    "img": [
+      {
+        "name": "name01",
+        "path": "../img/img01.png"
+      },
+      {
+        "name": "name02",
+        "path": "../img/img02.png"
+      },
+      {
+        "name": "name03",
+        "path": "../img/img03.png"
+      }
+    ]
+  },
+  {
+    "head": "タイトル02",
+    "lead": "リード文02",
+    "img": [
+      {
+        "name": "name01",
+        "path": "../img/img01.png"
+      },
+      {
+        "name": "name02",
+        "path": "../img/img02.png"
+      },
+      {
+        "name": "name03",
+        "path": "../img/img03.png"
+      }
+    ]
+  }
+]

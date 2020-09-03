@@ -1,0 +1,26 @@
+<%
+var page = {
+  id: 'test',
+  meta: meta['test'],
+  path: '../'
+};
+%>
+
+<%- include(page.path + '_layout/_layout_header', {page: page}); %>
+
+<% items.forEach(function(item){ %>
+<section>
+  <h2><%= item.head %></h2>
+  <p><%= item.lead %></p>
+  <ul>
+    <% item.img.forEach(function(img){ %>
+    <li>
+      <span><%= img.name %></span>
+      <img src="<%= img.path %>" alt="">
+    </li>
+    <% }) %>
+  </ul>
+</section>
+<% }) %>
+
+<%- include(page.path + '_layout/_layout_footer', {page: page}); %>

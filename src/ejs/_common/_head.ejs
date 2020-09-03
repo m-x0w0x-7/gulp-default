@@ -10,7 +10,11 @@
 
 <head>
 <meta charset="UTF-8">
-<title><%= page.meta['title'] %></title>
+<% if (page.id == 'top') { %>
+<title><%= page.meta['siteName'] %></title>
+<% } else { %>
+<title><%= page.meta['title'] %> | <%= page.meta['siteName'] %></title>
+<% } %>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="<%= page.meta['description'] %>">
 <meta name="format-detection" content="telephone=no">

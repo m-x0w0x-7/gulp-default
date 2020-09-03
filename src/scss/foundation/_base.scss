@@ -1,7 +1,7 @@
 // * ============================== * //
 
 // base setting
-// ex. 
+// ex.
 
 // * ============================== * //
 
@@ -27,7 +27,7 @@ img {
 }
 
 a {
-  color: $color_link;
+  color: color('link');
   text-decoration: none;
   transition: $transition;
   outline: none;
@@ -43,6 +43,6 @@ a.underline:hover {
 }
 
 a.color:hover {
-  color: $color_link_hover;
+  color: color('link');
   opacity: 1;
 }

@@ -1,0 +1,19 @@
+{
+  "list01": {
+    "name": "list01-name",
+    "img": "list01-img",
+    "url": "list01-url"
+  },
+
+  "list02": {
+    "name": "list02-name",
+    "img": "list02-img",
+    "url": "list02-url"
+  },
+
+  "list03": {
+    "name": "list03-name",
+    "img": "list03-img",
+    "url": "list03-url"
+  }
+}
