@@ -150,7 +150,7 @@ function image() {
   ];
 
   return gulp
-  .src( paths.image + '/*' )
+  .src( paths.image + '/**/*' )
   .pipe(imagemin( imageminOption ))
   .pipe(gulp.dest( paths.img ))
   .pipe(browserSync.reload({ stream: true }));

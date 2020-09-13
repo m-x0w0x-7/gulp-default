@@ -1,9 +1,13 @@
 // * ============================== * //
 
 // color setting
-// ex. 
+// ex.
 
 // * ============================== * //
+
+$color-main: #00f;
+$color-sub: #00f;
+$color-access: #00f;
 
 
 $colors: (
@@ -13,9 +17,11 @@ $colors: (
   ),
   // theme color
   'theme': (
-    'default': #e74c3c,
-    'light'  : #f09188,
-    'dark'   : #b82617
+    'default': $color-main,
+    'light': #e74c3c,
+    'dark': #e74c3c,
+    'sub'  : #f09188,
+    'accent'   : #b82617
   ),
   // line color
   'border': (
