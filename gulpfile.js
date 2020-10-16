@@ -31,15 +31,14 @@ const del = require('del');
 
 
 const paths = {
-  pug: './src/pug',
   ejs: './src/ejs',
-  scss: './src/scss',
-  javascript: './src/js',
-  image: './src/img',
+  scss: './src/assets/scss',
+  javascript: './src/assets/js',
+  image: './src/assets/img',
   root: './dist',
-  css: './dist/css',
-  js: './dist/js',
-  img: './dist/img'
+  css: './dist/assets/css',
+  js: './dist/assets/js',
+  img: './dist/assets/img'
 }
 
 
