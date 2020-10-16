@@ -1,0 +1,14 @@
+// * ============================== * //
+
+// arrow
+
+// * ============================== * //
+
+@mixin arrow($value, $border-width, $border-color, $deg, $skew: null) {
+  content: "";
+  width: $value;
+  height: $value;
+  border-top: $border-width solid $border-color;
+  border-right: $border-width solid $border-color;
+  transform: rotate($deg) skew($skew);
+}

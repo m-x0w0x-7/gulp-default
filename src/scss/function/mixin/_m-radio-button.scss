@@ -1,0 +1,94 @@
+// * ============================== * //
+
+// radio button
+
+// * ============================== * //
+
+// useage
+// <input type="radio" id="radio01" name="demo" /><label for="radio01">foo</label>
+
+@mixin radioBtn_01($color: $color_main) {
+  input[type="radio"] {
+    display: none;
+  }
+  label {
+    position: relative;
+    display: inline-block;
+    padding: 3px 3px 3px 20px;
+    cursor: pointer;
+  }
+  label::before {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 0;
+    width: 14px;
+    height: 14px;
+    margin-top: -8px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 100%;
+  }
+  input[type="radio"]:checked + label::after {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 4px;
+    width: 8px;
+    height: 8px;
+    margin-top: -4px;
+    background: $color;
+    border-radius: 100%;
+  }
+}
+
+@mixin radioBtn_02($color: $color_main) {
+  input[type="radio"] {
+    display: none;
+  }
+  label {
+    position: relative;
+    display: inline-block;
+    padding: 3px 3px 3px 20px;
+    cursor: pointer;
+  }
+  label::before,
+  label::after {
+    position: absolute;
+    content: '';
+    top: 50%;
+    border-radius: 100%;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+  }
+  label::before {
+    left: 0;
+    width: 14px;
+    height: 14px;
+    margin-top: -8px;
+    background: #f3f3f3;
+    border: 1px solid #ccc;
+  }
+  label:hover::before {
+    background: #fff;
+  }
+  label::after {
+    opacity: 0;
+    left: 4px;
+    width: 8px;
+    height: 8px;
+    margin-top: -4px;
+    background: $color;
+    -webkit-transform: scale(2);
+    transform: scale(2);
+  }
+  input[type="radio"]:checked + label::before {
+    background: #fff;
+    border: 1px solid $color;
+  }
+  input[type="radio"]:checked + label::after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}

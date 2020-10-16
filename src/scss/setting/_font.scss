@@ -1,26 +1,21 @@
 // * ============================== * //
 
 // font setting
-// ex. 
 
 // * ============================== * //
 
-
 // font-family
-// ============================== //
+$font-gothic : "Avenir", "Helvetica Neue", "Helvetica", "Arial", "Hiragino Sans", "ヒラギノ角ゴシック", YuGothic, "Yu Gothic", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic";
 
-$font_gothic : "Avenir", "Helvetica Neue", "Helvetica", "Arial", "Hiragino Sans", "ヒラギノ角ゴシック", YuGothic, "Yu Gothic", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic";
+$font-mincho : Georgia, 游明朝, "Yu Mincho", YuMincho, "Hiragino Mincho ProN", HGS明朝E, メイリオ, Meiryo, serif;
 
-$font_mincho : Georgia, 游明朝, "Yu Mincho", YuMincho, "Hiragino Mincho ProN", HGS明朝E, メイリオ, Meiryo, serif;
+$font-gothic-yakuhan : YakuHanJPs, "Avenir", "Helvetica Neue", "Helvetica", "Arial", "Hiragino Sans", "ヒラギノ角ゴシック", YuGothic, "Yu Gothic", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic";
 
-$font_gothic_yakuhan : YakuHanJPs, "Avenir", "Helvetica Neue", "Helvetica", "Arial", "Hiragino Sans", "ヒラギノ角ゴシック", YuGothic, "Yu Gothic", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic";
+$font-mincho-yakuhan : YakuHanMPs, Georgia, 游明朝, "Yu Mincho", YuMincho, "Hiragino Mincho ProN", HGS明朝E, メイリオ, Meiryo, serif;
 
-$font_mincho_yakuhan : YakuHanMPs, Georgia, 游明朝, "Yu Mincho", YuMincho, "Hiragino Mincho ProN", HGS明朝E, メイリオ, Meiryo, serif;
+$font-awesome : "Font Awesome 5 Free";
 
-$font_awesome : "Font Awesome 5 Free";
-
-$font_awesome_brand : "Font Awesome 5 Brands";
-
+$font-awesome-brand : "Font Awesome 5 Brands";
 
 
 // font-size

@@ -1,0 +1,13 @@
+// * ============================== * //
+
+// triangle
+
+// * ============================== * //
+
+@mixin triangle($value, $dir, $border-width, $border-color) {
+  content: "";
+  width: 0;
+  height: 0;
+  border: $value solid transparent;
+  border-#{$dir}: $border-width solid $border-color;
+}

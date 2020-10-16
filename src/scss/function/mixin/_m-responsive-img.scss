@@ -1,0 +1,21 @@
+// * ============================== * //
+
+// responsive image
+
+// * ============================== * //
+
+// usaage
+// @include responsive_image(image-width, image-height);
+// Responsive Movie
+
+@mixin responsive_image($width: 16, $height: 9) {
+  position: relative;
+  padding-top: percentage($height / $width);
+  > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+  }
+}

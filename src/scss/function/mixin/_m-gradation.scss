@@ -1,0 +1,18 @@
+// * ============================== * //
+
+// gradation
+
+// * ============================== * //
+
+// useage
+// @include linear-gradient(開始色、方向、明るくするパーセント);
+
+@mixin linear_gradient-_lighter($color: #f00, $way: to bottom, $percent: 20%) {
+  background-image: linear-gradient($color 0%, $way, lighten($color, $percent) 100%);
+}
+
+// @include linear-gradient(開始色、方向、暗くするパーセント);
+
+@mixin linear_gradient_darker($color: #f00, $way: to bottom, $percent: 20%) {
+  background-image: linear-gradient($color 0%, $way, darken($color, $percent) 100%);
+}

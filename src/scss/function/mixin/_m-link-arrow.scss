@@ -1,0 +1,22 @@
+// * ============================== * //
+
+// link arrow
+
+// * ============================== * //
+
+// useage
+// @include linkIcon(矢印の色)
+
+@mixin linkIcon($color: #333) {
+  &::before {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    width: 10px;
+    height: 10px;
+    margin-top: -7px;
+    border-top: 3px  solid $color;
+    background-repeat: 3px solid $color;
+    transform: rotate(45deg);
+  }
+}

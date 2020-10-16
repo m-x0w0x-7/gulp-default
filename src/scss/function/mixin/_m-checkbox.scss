@@ -1,0 +1,98 @@
+// * ============================== * //
+
+// checkbox
+
+// * ============================== * //
+
+// useage
+// <input type="checkbox" id="checkbox01" name="demo" /><label for="checkbox01">foo</label>
+
+@mixin checkbox_01($color: $color_main) {
+  input[type="checkbox"] {
+    display: none;
+  }
+  label {
+    position: relative;
+    display: inline-block;
+    padding: 3px 3px 3px 22px;
+    cursor: pointer;
+  }
+  label::before {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 0;
+    width: 14px;
+    height: 14px;
+    margin-top: -8px;
+    background: #fff;
+    border: 1px solid #ccc;
+  }
+  input[type="checkbox"]:checked + label::after {
+    position: absolute;
+    content: '';
+    top: 5px;
+    left: 3px;
+    width: 13px;
+    height: 5px;
+    border-left: 2px solid $color;
+    border-bottom: 2px solid $color;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+}
+
+@mixin checkbox_02($color: $color_main) {
+  input[type="checkbox"] {
+    display: none;
+  }
+  label {
+    position: relative;
+    display: inline-block;
+    padding: 3px 3px 3px 22px;
+    cursor: pointer;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+  }
+  label::before,
+  label::after {
+    position: absolute;
+    content: '';
+    -webkit-transition: all .2s;
+    transition: all .2s;
+  }
+  label::before {
+    top: 50%;
+    left: 0;
+    width: 14px;
+    height: 14px;
+    margin-top: -8px;
+    background: #f4f4f4;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  label::after {
+    opacity: 0;
+    top: 50%;
+    left: 3px;
+    width: 8px;
+    height: 4px;
+    margin-top: -4px;
+    border-left: 2px solid $color;
+    border-bottom: 2px solid $color;
+    -webkit-transform: rotate(-45deg) scale(.5);
+    transform: rotate(-45deg) scale(.5);
+  }
+  label:hover::before {
+    background: #fff;
+  }
+  input[type="checkbox"]:checked + label::before {
+    background: #fff;
+    border: 1px solid $color;
+  }
+  input[type="checkbox"]:checked + label::after {
+    opacity: 1;
+    -webkit-transform: rotate(-45deg) scale(1);
+    transform: rotate(-45deg) scale(1);
+  }
+}

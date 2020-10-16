@@ -1,0 +1,13 @@
+// * ============================== * //
+
+// animation
+
+// * ============================== * //
+
+@mixin anima {
+  @keyframes anima-example {
+    0% { transform: translate(0%, -100%); }
+    100% { transform: translate(0%, 0%); }
+  }
+  animation: anima-sample 0.9s linear 500ms 1;
+}

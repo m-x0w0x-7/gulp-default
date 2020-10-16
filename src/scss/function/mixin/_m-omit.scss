@@ -1,0 +1,20 @@
+// * ============================== * //
+
+// text omit
+
+// * ============================== * //
+
+// 1行
+@mixin omit-single {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+// 複数行
+@mixin omit-multiline($line) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $line;
+  overflow: hidden;
+}

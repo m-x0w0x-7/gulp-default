@@ -1,10 +1,6 @@
 const gulp = require('gulp');
 const fs = require('fs');
 
-// pug
-const pug = require('gulp-pug');
-const data = require('gulp-data');
-
 // ejs
 const ejs = require('gulp-ejs');
 const rename = require('gulp-rename');
@@ -50,12 +46,9 @@ const paths = {
 // ejs
 function ejsFunc() {
   // JSONファイルの読み込みと変換
-  const metaJsonData = fs.readFileSync( paths.ejs + '/_data/meta.json' );
-  const itemJsonData = fs.readFileSync( paths.ejs + '/_data/item.json' );
-  const listJsonData = fs.readFileSync( paths.ejs + '/_data/list.json' );
-  const metaObj = JSON.parse( metaJsonData );
-  const itemObj = JSON.parse( itemJsonData );
-  const listObj = JSON.parse( listJsonData );
+  const metaObj = JSON.parse( fs.readFileSync( paths.ejs + '/_data/meta.json' ) );
+  const itemObj = JSON.parse( fs.readFileSync( paths.ejs + '/_data/item.json' ) );
+  const listObj = JSON.parse( fs.readFileSync( paths.ejs + '/_data/list.json' ) );
 
   // ejsのデータ読み込み設定
   const ejsDataOption = {

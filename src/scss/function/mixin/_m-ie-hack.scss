@@ -1,0 +1,28 @@
+// * ============================== * //
+
+// IE hack
+
+// * ============================== * //
+
+@mixin hack($hack_ver: null) {
+	@if $hack_ver == "ie10" { // IE10以上
+		@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+			@content;
+		}
+	}
+	@else if $hack_ver == "ie11" { // IE11以上
+		@at-root _:-ms-fullscreen,:root & {
+			@content;
+		}
+	}
+	@else if $hack_ver == 'notIE8' { // IE8じゃないとき(他のブラウザも含める)
+		@media all and (min-width: 0) {
+			@content;
+		}
+	}
+	@else if $hack_ver == 'edge' { // Edgeのみ
+		@supports (-ms-ime-align: auto) {
+			@content;
+		}
+	}
+}

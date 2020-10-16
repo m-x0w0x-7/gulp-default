@@ -1,7 +1,6 @@
 // * ============================== * //
 
 // base setting
-// ex.
 
 // * ============================== * //
 
@@ -13,7 +12,7 @@
 body {
   width: 100%;
   min-height: 100vh;
-  font-family: $font_gothic;
+  font-family: $font-gothic;
   font-size: 1.6rem;
   line-height: 1.7;
   box-sizing: border-box;
@@ -35,14 +34,4 @@ a {
 
 a:hover {
   opacity: 0.7;
-}
-
-a.underline:hover {
-  text-decoration: underline;
-  opacity: 1;
-}
-
-a.color:hover {
-  color: color('link');
-  opacity: 1;
 }

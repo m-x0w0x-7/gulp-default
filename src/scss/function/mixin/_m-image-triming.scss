@@ -1,0 +1,20 @@
+// * ============================== * //
+
+// image_triming
+
+// * ============================== * //
+
+@mixin img_box($outerW, $outerH, $innerW: 100%, $innerH: auto) {
+	position: relative;
+  overflow: hidden;
+  width: $outerW;
+  height: $outerH;
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate( -50%, -50% );
+    width: $innerW;
+    height: $innerH;
+  }
+}

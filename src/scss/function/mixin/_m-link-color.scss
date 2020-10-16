@@ -1,0 +1,23 @@
+// * ============================== * //
+
+// link color
+
+// * ============================== * //
+
+$normal: #f00;
+$hover: #00f;
+@mixin link_color($n: $normal, $h: $hover) {
+  color: $n;
+  &:hover {
+    color: $h;
+    text-decoration: none;
+  }
+}
+
+@mixin link_color_lighten($n) {
+  color: $n;
+  &:hover {
+    color: lighten($n, 30%);
+    text-decoration: none;
+  }
+}
