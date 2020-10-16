@@ -4,7 +4,7 @@ module.exports = {
   mode: "development",
 
   // メインのJS
-  entry: "./src/js/main.js",
+  entry: "./src/assets/js/main.js",
   // 出力ファイル
   output: {
     filename: "main.js"
