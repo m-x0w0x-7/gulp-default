@@ -1,5 +1,9 @@
-// sub.jsファイルを読み込む
-import {hello} from "./sub";
+// page top
+import {pageTop} from "./scroll";
 
-// sub.jsに定義されたJavaScriptを実行する
-hello();
+pageTop();
+
+// smooth scroll
+import {smoothScroll} from "./scroll";
+
+smoothScroll();
